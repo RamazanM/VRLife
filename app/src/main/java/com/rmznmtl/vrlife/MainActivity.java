@@ -17,7 +17,5 @@ public class MainActivity extends AppCompatActivity {
 
         vrview.setBitmap(BitmapFactory.decodeResource(getResources(),R.drawable.image));
 
-
-
     }
 }
