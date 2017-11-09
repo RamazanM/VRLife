@@ -22,7 +22,9 @@ public class VrView extends View {
     }
 
     public void setBitmap(Bitmap bmp) {
+
         bitmap = bmp;
+        this.invalidate();
     }
 
     @Override
@@ -34,6 +36,7 @@ public class VrView extends View {
             int canvasHeigth = canvas.getHeight();
             int bitmapWidth = bitmap.getWidth();
             int bitmapHeight = bitmap.getHeight();
+            Log.d("asd", "onDraw: "+bitmapHeight);
 
             float canvasRatio = canvasWidth / canvasHeigth;
             float bmpRatio = (float)bitmapWidth / (float)bitmapHeight;
@@ -57,7 +60,7 @@ public class VrView extends View {
             Paint p = new Paint(Color.TRANSPARENT);
 
                 canvas.drawBitmap(scaled, rectL, dRectL, p);
-                canvas.drawBitmap(scaled, rectR, dRectR, p);
+//                canvas.drawBitmap(scaled, rectR, dRectR, p);
 
 
         }
