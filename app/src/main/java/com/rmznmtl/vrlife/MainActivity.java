@@ -18,19 +18,19 @@ public class MainActivity extends AppCompatActivity {
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 //        RelativeLayout rl = new RelativeLayout(this);
-//        CameraPreview2 cp=new CameraPreview2(this,0, CameraPreview2.LayoutMode.FitToParent);
-//
-//
+//        CameraPreviewSurface cp=new CameraPreviewSurface(this);
+
+
 //        rl.addView(cp);
+
+        setContentView(R.layout.cam_tex_prev);
+//        setContentView(R.layout.activity_main);
+
+
+//        final VrView vrview=(VrView)findViewById(R.id.vr_view);
+//        final CameraPreviewOld cp=new CameraPreviewOld(this,vrview);
 //
-//        setContentView(rl);
-        setContentView(R.layout.activity_main);
-
-
-        final VrView vrview=(VrView)findViewById(R.id.vr_view);
-        final CameraPreviewOld cp=new CameraPreviewOld(this,vrview);
-
-        vrview.setBitmap(cp.getPreview());
+//        vrview.setBitmap(cp.getPreview());
 //        vrview.setBitmap(BitmapFactory.decodeResource(getResources(),R.drawable.image));
 
 

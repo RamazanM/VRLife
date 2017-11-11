@@ -162,7 +162,7 @@ public class CameraPreview2 extends SurfaceView implements SurfaceHolder.Callbac
      * @param portrait
      * @param reqWidth must be the value of the parameter passed in surfaceChanged
      * @param reqHeight must be the value of the parameter passed in surfaceChanged
-     * @return Camera.Size object that is an element of the list returned from Camera.Parameters.getSupportedPreviewSizes.
+     * @return MyCamera.Size object that is an element of the list returned from MyCamera.Parameters.getSupportedPreviewSizes.
      */
     protected Camera.Size determinePreviewSize(boolean portrait, int reqWidth, int reqHeight) {
         // Meaning of width and height is switched for preview when portrait,
