@@ -60,7 +60,7 @@ public class VrView extends View {
             Paint p = new Paint(Color.TRANSPARENT);
 
                 canvas.drawBitmap(scaled, rectL, dRectL, p);
-//                canvas.drawBitmap(scaled, rectR, dRectR, p);
+                canvas.drawBitmap(scaled, rectR, dRectR, p);
 
 
         }

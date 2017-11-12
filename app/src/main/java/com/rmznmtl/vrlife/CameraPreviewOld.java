@@ -24,10 +24,12 @@ import javax.microedition.khronos.egl.EGLConfig;
 
 public class CameraPreviewOld {
     Camera camera;
+    boolean isOpen=false;
 
     Bitmap previewBitmap=null;
     public CameraPreviewOld(Context ctx, final VrView view) {
         camera=Camera.open();
+        isOpen=true;
         Camera.Parameters parameters = camera.getParameters();
         final int PreviewSizeWidth=parameters.getPreviewSize().width,PreviewSizeHeight=parameters.getPreviewSize().height;
         final int imageFormat = parameters.getPreviewFormat();
@@ -55,5 +57,11 @@ public class CameraPreviewOld {
 
     public Bitmap getPreview(){
         return previewBitmap;
+    }
+    public void Stop(){
+        if(isOpen) {
+            camera.stopPreview();
+            camera.release();
+        }
     }
 }
