@@ -43,7 +43,7 @@ public class CameraPreviewOld {
                 {
                     YuvImage img = new YuvImage(data, ImageFormat.NV21, PreviewSizeWidth, PreviewSizeHeight, null);
                     ByteArrayOutputStream outStream = new ByteArrayOutputStream();
-                    img.compressToJpeg(rect, 100,outStream);
+                    img.compressToJpeg(rect, 50,outStream);
                     byte[] imageBytes = outStream.toByteArray();
                     previewBitmap=BitmapFactory.decodeByteArray(imageBytes,0,imageBytes.length);
                     view.setBitmap(previewBitmap);
@@ -61,7 +61,6 @@ public class CameraPreviewOld {
     public void Stop(){
         if(isOpen) {
             camera.stopPreview();
-            camera.release();
         }
     }
 }

@@ -6,9 +6,13 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Rect;
+import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
+import android.widget.CalendarView;
+
+import java.util.ArrayList;
 
 /**
  * Created by ramazan on 10/31/17.
@@ -16,13 +20,16 @@ import android.view.View;
 
 public class VrView extends View {
     private Bitmap bitmap = null;
+    private ArrayList<DrawableView> cizilecekViewler=new ArrayList<>();
 
     public VrView(Context context, AttributeSet attributeSet) {
         super(context, attributeSet);
+        CalendarView cv=new CalendarView(context,attributeSet);
+//        DrawableView dw=new DrawableView(cv);
+//        addCizilecekView(dw);
     }
 
     public void setBitmap(Bitmap bmp) {
-
         bitmap = bmp;
         this.invalidate();
     }
@@ -61,9 +68,22 @@ public class VrView extends View {
 
                 canvas.drawBitmap(scaled, rectL, dRectL, p);
                 canvas.drawBitmap(scaled, rectR, dRectR, p);
+            for (DrawableView drawableView : cizilecekViewler) {
+                canvas.drawBitmap(drawableView.getDrawableBitmap(),drawableView.getsRect(),drawableView.getdRect(),null);
+                Log.d("asd", "onDraw: Çizildi");
+            }
 
 
         }
 
     }
+
+    public void addCizilecekView(DrawableView dw){
+        cizilecekViewler.add(dw);
+        Log.d("asd", "addCizilecekView: Eklendi");
+    }
+
+
+
+
 }

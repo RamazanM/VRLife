@@ -5,7 +5,7 @@ android {
     buildToolsVersion '26.0.2'
     defaultConfig {
         applicationId "com.rmznmtl.vrlife"
-        minSdkVersion 19
+        minSdkVersion 17
         targetSdkVersion 25
         versionCode 1
         versionName "1.0"
@@ -26,8 +26,8 @@ dependencies {
     })
     compile 'com.android.support:appcompat-v7:25.3.1'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
-    compile 'com.google.vr:sdk-base:1.80.0'
-    compile 'com.google.vr:sdk-panowidget:1.100.0'
+//    compile 'com.google.vr:sdk-base:1.80.0'
+//    compile 'com.google.vr:sdk-panowidget:1.100.0'
 
 
 
