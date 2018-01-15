@@ -22,12 +22,12 @@ import javax.microedition.khronos.egl.EGLConfig;
  * Created by ramazan on 10/26/17.
  */
 
-public class CameraPreviewOld {
+public class CameraPreview {
     Camera camera;
     boolean isOpen=false;
 
     Bitmap previewBitmap=null;
-    public CameraPreviewOld(Context ctx, final VrView view) {
+    public CameraPreview(Context ctx, final VrView view) {
         camera=Camera.open();
         isOpen=true;
         Camera.Parameters parameters = camera.getParameters();

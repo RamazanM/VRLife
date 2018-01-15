@@ -24,9 +24,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         final Context ctx=this;
 
+
         Button VrViewBtn =(Button)findViewById(R.id.VRViewBtn);
-        Button SurfaceBtn=(Button)findViewById(R.id.SurfaceViewBtn);
-        Button TextureBtn=(Button)findViewById(R.id.textureViewBtn);
 
             VrViewBtn.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -36,13 +35,15 @@ public class MainActivity extends AppCompatActivity {
                 }
             });
 
-            SurfaceBtn.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent i=new Intent(ctx,SurfaceViewActivity.class);
-                    startActivity(i);
-                }
-            });
+        Button Speech=(Button) findViewById(R.id.speechbtn);
+        Speech.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i=new Intent(ctx,TestSpeech.class);
+                startActivity(i);
+            }
+        });
 
     }
+
 }
