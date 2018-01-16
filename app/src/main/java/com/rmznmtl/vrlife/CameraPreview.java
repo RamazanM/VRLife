@@ -25,6 +25,7 @@ import javax.microedition.khronos.egl.EGLConfig;
 public class CameraPreview {
     Camera camera;
     boolean isOpen=false;
+    private Camera.PreviewCallback previewCallback;
 
     Bitmap previewBitmap=null;
     public CameraPreview(Context ctx, final VrView view) {
@@ -36,7 +37,7 @@ public class CameraPreview {
         final Rect rect = new Rect(0, 0, PreviewSizeWidth, PreviewSizeHeight);
 
 
-        final Camera.PreviewCallback previewCallback=new Camera.PreviewCallback(){
+         previewCallback=new Camera.PreviewCallback(){
             @Override
             public void onPreviewFrame(byte[] data, Camera camera) {
                 if (imageFormat == ImageFormat.NV21)
@@ -60,7 +61,11 @@ public class CameraPreview {
     }
     public void Stop(){
         if(isOpen) {
+            camera.setPreviewCallback(null);
             camera.stopPreview();
+            previewCallback=null;
+            camera.release();
+            camera=null;
         }
     }
 }

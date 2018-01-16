@@ -17,12 +17,4 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/speechbtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Speech"
-        tools:layout_editor_absoluteX="138dp"
-        tools:layout_editor_absoluteY="424dp" />
-
 </android.support.constraint.ConstraintLayout>

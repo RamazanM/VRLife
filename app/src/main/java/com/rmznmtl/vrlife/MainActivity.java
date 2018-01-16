@@ -35,14 +35,14 @@ public class MainActivity extends AppCompatActivity {
                 }
             });
 
-        Button Speech=(Button) findViewById(R.id.speechbtn);
-        Speech.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i=new Intent(ctx,TestSpeech.class);
-                startActivity(i);
-            }
-        });
+//        Button Speech=(Button) findViewById(R.id.speechbtn);
+//        Speech.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent i=new Intent(ctx,TestSpeech.class);
+//                startActivity(i);
+//            }
+//        });
 
     }
 

@@ -24,34 +24,35 @@ public class TestSpeech extends AppCompatActivity {
         final TextView kelime=(TextView)findViewById(R.id.textView2);
         Button btn=(Button) findViewById(R.id.button2) ;
 
-        sp=new MySpeech(this,null);
+
+        SensorHandler sh=new SensorHandler(this,(TextView)findViewById(R.id.textView3));
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                try {
-                    sp.startListening();
-                } catch (SpeechRecognitionNotAvailable speechRecognitionNotAvailable) {
-                    speechRecognitionNotAvailable.printStackTrace();
-                } catch (GoogleVoiceTypingDisabledException e) {
-                    e.printStackTrace();
-                }
+//                try {
+////                    sp.startListening();
+//                } catch (SpeechRecognitionNotAvailable speechRecognitionNotAvailable) {
+//                    speechRecognitionNotAvailable.printStackTrace();
+//                } catch (GoogleVoiceTypingDisabledException e) {
+//                    e.printStackTrace();
+//                }
             }
         });
 
-
-        try {
-          sp.startListening();
-
-        } catch (SpeechRecognitionNotAvailable speechRecognitionNotAvailable) {
-            speechRecognitionNotAvailable.printStackTrace();
-        } catch (GoogleVoiceTypingDisabledException e) {
-            e.printStackTrace();
-        }
+//
+//        try {
+//          sp.startListening();
+//
+//        } catch (SpeechRecognitionNotAvailable speechRecognitionNotAvailable) {
+//            speechRecognitionNotAvailable.printStackTrace();
+//        } catch (GoogleVoiceTypingDisabledException e) {
+//            e.printStackTrace();
+//        }
 
     }
     protected void onDestroy() {
-        sp.destroy();
+//        sp.destroy();
         super.onDestroy();
     }
 

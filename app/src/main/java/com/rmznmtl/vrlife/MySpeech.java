@@ -22,11 +22,11 @@ public class MySpeech {
     private Speech SIntance;
     private SpeechDelegate delegate;
     String ResText;
-    TextView tw;
+
 
     public MySpeech(Context ctx, @Nullable final VRViewActivity activity){
         this.ctx=ctx;
-        this.tw=tw;
+        Log.d("asd", "MySpeech: init");
         Speech.init(ctx);
         this.SIntance=Speech.getInstance();
 
@@ -44,11 +44,10 @@ public class MySpeech {
                 }
 
                 ResText=str.toString().trim();
-                tw.setText(ResText);
             }
             public void onSpeechResult(String result) {
                 ResText=result;
-                tw.setText(ResText);
+
                 activity.Command(result);
             }
         };
