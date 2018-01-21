@@ -10,13 +10,16 @@ improve it.
 
 --------------------
 
-#Functions
+# Functions
 
 |Command      |Description                      |
+|-------------|---------------------------------|
 |mod koyu     |It makes camera view darker...   |
 |mod parlak   |It makes camera view brighter... |
 |takvimi ac   |Open the calendar in VR View...  |
 |takvimi gizle|Close the calendar...            |
+
+---------------------
 
 #Screenshots
 
