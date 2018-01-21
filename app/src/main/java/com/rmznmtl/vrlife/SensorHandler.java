@@ -32,8 +32,6 @@ public class SensorHandler {
             @Override
             public void onSensorChanged(SensorEvent event) {
 
-//                Log.d("asd", "onSensorChanged: [0]"+event.values[0]+"[1]"+event.values[1]+"[2]"+event.values[2]);
-
                 if(event.values[0]>20){
                     try {
                     activity.listen();
@@ -67,13 +65,6 @@ public class SensorHandler {
                 Log.d("asd", "onSensorChanged: [0]"+event.values[0]+"[1]"+event.values[1]+"[2]"+event.values[2]);
                 tw.setText("[0]"+event.values[0]+"\n[1]"+event.values[1]+"\n[2]"+event.values[2]);
 
-//                try {
-//                    activity.listen();
-//                } catch (SpeechRecognitionNotAvailable speechRecognitionNotAvailable) {
-//                    speechRecognitionNotAvailable.printStackTrace();
-//                } catch (GoogleVoiceTypingDisabledException e) {
-//                    e.printStackTrace();
-//                }
             }
 
             @Override

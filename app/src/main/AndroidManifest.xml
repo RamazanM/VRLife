@@ -28,7 +28,6 @@
             android:name=".VRViewActivity"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="landscape" />
-        <activity android:name=".TestSpeech"></activity>
     </application>
 
 </manifest>

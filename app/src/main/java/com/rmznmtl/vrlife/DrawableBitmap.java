@@ -6,9 +6,6 @@ import android.graphics.BitmapFactory;
 import android.graphics.Rect;
 import android.util.Log;
 
-/**
- * Created by ramazan on 12/7/17.
- */
 
 public class DrawableBitmap {
 

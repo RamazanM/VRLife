@@ -2,18 +2,13 @@ package com.rmznmtl.vrlife;
 
 import android.content.Context;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
-import android.graphics.Color;
-import android.graphics.ColorMatrix;
 import android.graphics.ColorMatrixColorFilter;
 import android.graphics.Paint;
 import android.graphics.Rect;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.View;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 /**
@@ -22,12 +17,9 @@ import java.util.ArrayList;
 
 public class VrView extends View {
 
-    private Bitmap bitmap = null;
-
-    private ArrayList<DrawableBitmap> cizilecekViewler=new ArrayList<>();
-
     Context context;
-
+    private Bitmap bitmap = null;
+    private ArrayList<DrawableBitmap> cizilecekViewler=new ArrayList<>();
     private ColorMatrixColorFilter normal = new ColorMatrixColorFilter(new float[]{
             1, 0, 0, 0, 0,
             0, 1, 0, 0, 0,
@@ -90,7 +82,7 @@ public class VrView extends View {
             float bmpRatio = (float) bitmapWidth / (float) bitmapHeight;
 
             int singlePhotoWidth = canvasWidth / 2;
-            int singlePhotoHeight = (int) Math.round((singlePhotoWidth / bmpRatio));
+            int singlePhotoHeight = Math.round((singlePhotoWidth / bmpRatio));
 
             int topPadding = Math.round((canvasHeigth - singlePhotoHeight) / 2);
 
@@ -133,7 +125,7 @@ public class VrView extends View {
             float bmpRatio = (float) bitmapWidth / (float) bitmapHeight;
 
             int singlePhotoWidth = canvasWidth / 2;
-            int singlePhotoHeight = (int) Math.round((singlePhotoWidth / bmpRatio));
+            int singlePhotoHeight = Math.round((singlePhotoWidth / bmpRatio));
 
             int topPadding = Math.round((canvasHeigth - singlePhotoHeight) / 2);
 
@@ -172,6 +164,5 @@ public class VrView extends View {
                 break;
 
         }
-        Log.d("asd", "setMod: Mod setted to "+seciliFiltre);
     }
 }

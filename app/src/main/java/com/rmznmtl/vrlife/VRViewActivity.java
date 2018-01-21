@@ -1,27 +1,19 @@
 package com.rmznmtl.vrlife;
 
-import android.content.Context;
-import android.hardware.Sensor;
-import android.hardware.SensorEvent;
-import android.hardware.SensorEventListener;
-import android.hardware.SensorManager;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
-import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
 
 import net.gotev.speech.GoogleVoiceTypingDisabledException;
-import net.gotev.speech.Speech;
 import net.gotev.speech.SpeechRecognitionNotAvailable;
 
 public class VRViewActivity extends AppCompatActivity {
 
-    private CameraPreview cp;
-    private VrView vrview;
     public SensorHandler sensorHandler;
     public MySpeech mySpeech;
+    private CameraPreview cp;
+    private VrView vrview;
     private DrawableBitmap takvim;
 
     @Override
@@ -32,30 +24,11 @@ public class VRViewActivity extends AppCompatActivity {
         sensorHandler=new SensorHandler(this,this);
         mySpeech= new MySpeech(this,this);
 
-
-
-
-
         vrview=(VrView)findViewById(R.id.vr_v);
 
         cp=new CameraPreview(this,vrview);
 
         takvim=new DrawableBitmap(getResources(),R.drawable.takvim,200);
-//
-//        final DrawableBitmap dw=new DrawableBitmap(getResources(),R.drawable.image,500);
-//
-//        vrview.addCizilecekView(dw);
-
-
-//        btn.setOnClickListener(new View.OnClickListener() {
-//            public void onClick(View v) {
-//                if(vrview.countCizilecekView()>0)
-//                    vrview.removeCizilecekView();
-//                else
-//                    vrview.addCizilecekView(dw);
-//
-//            }
-//        });
 
     }
 
